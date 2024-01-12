@@ -20,3 +20,8 @@ df_up_to_11_2020 = df_up_to_11_2020.dropna()
 
 print(df_up_to_11_2020.head())
 print(df_india.head())
+
+# Mergining datasets
+merged_df = pd.concat([df_india, df_up_to_11_2020], ignore_index=True, sort=False)
+
+print(merged_df.head())
