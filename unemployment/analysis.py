@@ -1,32 +1,29 @@
-import pandas as pd
+iimport pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-file_path = 'Unemployment in India.csv'
-file_path2 = 'Unemployment_Rate_upto_11_2020.csv'
+#loading the dataset
+df = pd.read_csv('Unemployment_Rate_upto_11_2020.csv')
 
-df = pd.read_csv(file_path)
-df2 = pd.read_csv(file_path2)
+#exploring dataset
+print(df.head())
 
-columns_in_df1 = set(df.columns)
-columns_in_df2 = set(df2.columns)
+#summary stats
+print(df.describe())
 
-columns_only_in_df1 = columns_in_df1 - columns_in_df2
-columns_only_in_df2 = columns_in_df2 - columns_in_df1
-
-print("Columns only in the first DataFrame:", columns_only_in_df1)
-print("columns only in the second DataFrame:", columns_only_in_df2)
-
-# Removing leading and trailing spaces in column Names
-df.columns = df.columns.str.strip()
-df2.columns = df2.columns.str.strip()
+#checking for any missing values
+print(df.isnull().sum())
 
 # Removing leading and trailing spaces in the 'Date' column
 df['Date'] = df['Date'].str.strip()
-df2['Date'] = df2['Date'].str.strip()
 
-df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y', dayfirst=True)
-df2['Date'] = pd.to_datetime(df2['Date'], format='%d-%m-%Y', dayfirst=True)
+# Convert 'Date' column to datetime format
+df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y')
 
-# Merging the DataFrames on the 'Date' columns
-merged_df = pd.merge(df, df2, on='Date', how='inner')
-
-print(merged_df.head())
+# Line plot of unemployment rate over time for a specific region (e.g., ' Uttar Pradesh')
+plt.figure(figsize=(10, 6))
+sns.lineplot(x='Date', y='Estimated Unemployment Rate(%)', data=df[df['Region'] == 'Uttar Pradesh'])
+plt.title('Unemployment Rate Over Time in Uttar Pradesh')
+plt.xlabel('Date')
+plt.ylabel('Unemployment Rate (%)')
+plt.show()
