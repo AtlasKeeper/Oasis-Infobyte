@@ -34,6 +34,14 @@
     <p>Example usage of the script:</p>
     <pre><code>python model.py</code></pre>
 
+<h2>Modification</h2>
+    <p>To modify the <code>model.py</code> script:</p>
+    <ol>
+        <li>Edit the script using a text editor or integrated development environment (IDE).</li>
+        <li>Update parameters such as feature selection, polynomial degree, hyperparameter grid, etc., according to your specific requirements.</li>
+        <li>Save the changes to the script.</li>
+    </ol>
+
 <h2>Author</h2>
     <p>Author: AtlasKeeper</p>
 
