@@ -7,7 +7,7 @@
 <body>
     <h1>Oasis Infobyte Internships Projects</h1>
 
-    <h2>Projects</h2>
+<h2>Projects</h2>
     <ol>
         <li>
             <strong>car_prediction</strong>: Repository for the car prediction project.
@@ -31,9 +31,9 @@
         </li>
     </ol>
 
-    <h2>Repository Files Navigation</h2>
+<h2>Repository Files Navigation</h2>
     <p>Use the navigation to explore files and folders within the repository.</p>
 
-    <p><em>This documentation represents my interpretation of these projects, and I acknowledge that I still have many things to learn in the field of machine learning and data analysis.</em></p>
+<p><em>This documentation represents my interpretation of these projects, and I acknowledge that I still have many things to learn in the field of machine learning and data analysis.</em></p>
 </body>
 </html>
