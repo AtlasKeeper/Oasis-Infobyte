@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Oasis Infobyte Internships Projects</h1>
+    <h1>Oasis Infobyte Projects</h1>
 
 <h2>Projects</h2>
     <ol>
